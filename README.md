@@ -10,7 +10,7 @@
 
 ---
 
-[Estructura basica](https://github.com/meditux27/JFrame-JavaSwing/blob/main/principal/MiVentana.java)
+[Estructura basica](https://github.com/meditux27/JDialog-JavaSwing/blob/main/basic/MyDialogExample.java)
 
 Aquí tienes algunas de las características más importantes de un JDialog:
 
