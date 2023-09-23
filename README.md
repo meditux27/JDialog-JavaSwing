@@ -34,31 +34,97 @@ Aquí tienes algunas de las características más importantes de un JDialog:
 
 ---
 
-> :beginner: setTitle
+Pasos para implementar JDialog
+
+1. **Importar las clases necesarias:** Asegúrate de importar las clases necesarias al principio de tu archivo Java. 
+   
+   `import javax.swing.*;`
+   
+   `import java.awt.*;` 
+   
+   `import java.awt.event.ActionEvent;`
+   
+   `import java.awt.event.ActionListener;`
+
+2. **Crear una instancia de JDialog:** Crea una instancia de `JDialog` utilizando uno de los constructores disponibles. Puedes especificar el propietario de la ventana principal (un `JFrame`, por ejemplo), el título y si deseas que el cuadro de diálogo sea modal o no.
+   
+   `JFrame frame = new JFrame("Ventana Principal"); `
+   
+   `JDialog dialog = new JDialog(frame, "Cuadro de Diálogo", true);`
+   
+   
+   
+   Explicación detallada de cada argumento:
+   
+   - `frame`: Este es el propietario del cuadro de diálogo, generalmente un `JFrame` que representa la ventana principal de tu aplicación. El cuadro de diálogo estará asociado a esta ventana y bloqueará la interacción con ella mientras esté visible.
+   
+   - `"Cuadro de Diálogo"`: Este es el título del cuadro de diálogo. Aparecerá en la barra de título de la ventana del cuadro de diálogo.
+   
+   - `true`: Este argumento establece si el cuadro de diálogo es modal o no. Cuando se establece en `true`, el cuadro de diálogo es modal, lo que significa que bloqueará la interacción con la ventana principal hasta que se cierre. Los cuadros de diálogo modales son útiles cuando deseas que el usuario complete una tarea o tome una decisión antes de continuar con la aplicación principal.
+   
+   
+
+3. **Agregar componentes al JDialog:** Agrega los componentes de interfaz de usuario (botones, etiquetas, campos de texto, etc.) al cuadro de diálogo utilizando métodos como `add(component)` y personaliza su diseño según sea necesario.
+   
+   `JButton button = new JButton("Aceptar"); `
+   
+   `button.addActionListener(new ActionListener() {     `
+   
+   `public void actionPerformed(ActionEvent e) {         `
+   
+   `// Lógica para manejar el botón "Aceptar" aquí         `
+   
+   `dialog.dispose(); // Cierra el cuadro de diálogo     `
+   
+   `} }); `
+   
+   `dialog.add(button);`
+
+4. **Configurar el cierre del JDialog:** Decide qué sucede cuando se cierra el cuadro de diálogo utilizando el método `setDefaultCloseOperation(int operation)`. Puedes configurarlo para que el cuadro de diálogo se oculte, se elimine o no haga nada al cerrarse.
+   
+   `dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE); // Ocultar el cuadro de diálogo al cerrarlo`
+
+5. **Mostrar el JDialog:** Finalmente, muestra el cuadro de diálogo utilizando el método `setVisible(true)`.
+   
+   `dialog.pack(); // Redimensiona el cuadro de diálogo para ajustarse al contenido dialog.setVisible(true); // Muestra el cuadro de diálogo`
+
+6. **Manejar eventos y respuestas del usuario:** Agrega manejadores de eventos a los componentes dentro del cuadro de diálogo para responder a las acciones del usuario, como hacer clic en botones.
+   
+   `button.addActionListener(new ActionListener() {     `
+   
+   `public void actionPerformed(ActionEvent e) {         `
+   
+   `// Lógica para manejar el botón "Aceptar" aquí         `
+   
+   `dialog.dispose(); // Cierra el cuadro de diálogo     `
+   
+   `} });`
+
+---
+
+> :beginner: setVisible
 
 - Descripción
 
-Establece el título de la ventana 
+Muestra u oculta el cuadro de dialogo
 
 - Sintaxis
 
-frame.setTitle(" texto ");
+dialog.setVisible(boolean);
 
 - Nota
 
 Para el uso del metodo setTitle se debe instanciar JFrame, posteriormente llamar la variable asignada y agregar .setTitle(" texto ")
 
 <sub> Crear un JFrame</sub>  
-`JFrame frame = new JFrame();`
+`JDialog dialog = new JDialog(frame, "Cuadro de Diálogo", true);`
 
 <sub>Agregar setTitle </sub>  
-`frame.setTitle("Titulo de la ventana");`
+`dialog.setVisible("true");`
 
 - Ejemplo
 
-[ setTitle]( https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
-
-[setTitle2](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample2.java)
+[setVisible]( https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
 
 ---
 
