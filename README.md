@@ -124,7 +124,7 @@ Para el uso del metodo setTitle se debe instanciar JFrame, posteriormente llamar
 
 - Ejemplo
 
-[setVisible](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogVisibilityExample.java)
+[setVisible]( https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
 
 ---
 
