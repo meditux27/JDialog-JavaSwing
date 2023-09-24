@@ -6,8 +6,6 @@
 
 ##### Un cuadro de diálogo es una ventana emergente que generalmente se utiliza para interactuar con el usuario de manera modal, lo que significa que el usuario debe completar la interacción con el cuadro de diálogo antes de volver a interactuar con la ventana principal de la aplicación
 
-
-
 ---
 
 [Estructura basica](https://github.com/meditux27/JDialog-JavaSwing/blob/main/basic/MyDialogExample.java)
@@ -51,19 +49,14 @@ Pasos para implementar JDialog
    `JFrame frame = new JFrame("Ventana Principal"); `
    
    `JDialog dialog = new JDialog(frame, "Cuadro de Diálogo", true);`
-   
-   
-   
-   Explicación detallada de cada argumento:
-   
-   - `frame`: Este es el propietario del cuadro de diálogo, generalmente un `JFrame` que representa la ventana principal de tu aplicación. El cuadro de diálogo estará asociado a esta ventana y bloqueará la interacción con ella mientras esté visible.
-   
-   - `"Cuadro de Diálogo"`: Este es el título del cuadro de diálogo. Aparecerá en la barra de título de la ventana del cuadro de diálogo.
-   
-   - `true`: Este argumento establece si el cuadro de diálogo es modal o no. Cuando se establece en `true`, el cuadro de diálogo es modal, lo que significa que bloqueará la interacción con la ventana principal hasta que se cierre. Los cuadros de diálogo modales son útiles cuando deseas que el usuario complete una tarea o tome una decisión antes de continuar con la aplicación principal.
-   
-   
 
+   Explicación detallada de cada argumento:
+
+- `frame`: Este es el propietario del cuadro de diálogo, generalmente un `JFrame` que representa la ventana principal de tu aplicación. El cuadro de diálogo estará asociado a esta ventana y bloqueará la interacción con ella mientras esté visible.
+
+- `"Cuadro de Diálogo"`: Este es el título del cuadro de diálogo. Aparecerá en la barra de título de la ventana del cuadro de diálogo.
+
+- `true`: Este argumento establece si el cuadro de diálogo es modal o no. Cuando se establece en `true`, el cuadro de diálogo es modal, lo que significa que bloqueará la interacción con la ventana principal hasta que se cierre. Los cuadros de diálogo modales son útiles cuando deseas que el usuario complete una tarea o tome una decisión antes de continuar con la aplicación principal.
 3. **Agregar componentes al JDialog:** Agrega los componentes de interfaz de usuario (botones, etiquetas, campos de texto, etc.) al cuadro de diálogo utilizando métodos como `add(component)` y personaliza su diseño según sea necesario.
    
    `JButton button = new JButton("Aceptar"); `
@@ -114,7 +107,7 @@ dialog.setVisible(boolean);
 
 - Nota
 
-Para el uso del metodo setTitle se debe instanciar JFrame, posteriormente llamar la variable asignada y agregar .setTitle(" texto ")
+Para el uso del metodo setVisible se debe instanciar JDialogs, posteriormente llamar la variable asignada y agregar .setVisible(true o false)
 
 <sub> Crear un JFrame</sub>  
 `JDialog dialog = new JDialog(frame, "Cuadro de Diálogo", true);`
@@ -124,7 +117,7 @@ Para el uso del metodo setTitle se debe instanciar JFrame, posteriormente llamar
 
 - Ejemplo
 
-[setVisible]( https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetTitleExample.java)
+[setVisible]( https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogVisibilityExample.java)
 
 ---
 
