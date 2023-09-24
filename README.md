@@ -215,29 +215,51 @@ Agregar setVisible
 
 ---
 
-:beginner: ()
+:beginner: setLayout(LayoutManager manager)
 
 - Descripción
 
-Establece el título del cuadro de diálogo.
+Establece el administrador de diseño del panel para controlar la disposición de los componentes anexados al panel, entre los mas utilizados son : `FlowLayout|GridLayout|BorderLayout`
 
 - Sintaxis
 
-dialog.setTitle("String");
+Se puede utilizar de 2 maneras
+
+1. Creando la instancia de layout manager y asignando el nombre de la variable donde se guardo la instancia
+
+`GridLayout diseno = new GridLayout(3, 3);`
+
+`dialog.setLayout(diseno);`
+
+2. Agregando directamente al panel mediante la instancia
+
+`JDialog dialog = new JDialog(frame,"JDialog" ,false);`
+
+`dialog.setLayout(new FlowLayout());`
 
 - Nota
 
-Para el uso del metodo setTitle se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .setTitle("Titulo Personalizado")
+Establece el administrador de diseño del panel para controlar la disposición de los componentes anexados al JDialog, entre los mas utilizados son : `FlowLayout|GridLayout|BorderLayout`
 
-Crear un JDialog  
-`JDialog dialog = new JDialog(frame, true);`
+1. FlowLayout
 
-Agregar setVisible  
-`dialog.setTitle("Titulo de JDialog Personalizado");`
+*Organiza los componentes en una fila horizontal o vertical, ajustándolos automáticamente a medida que se agregan. Es útil para diseños simples de una fila o una columna de componentes.*
+
+2. *BorderLayout*
+
+*Divide el contenedor en cinco áreas: norte, sur, este, oeste y centro. Cada área puede contener un solo componente, y los componentes se expanden para llenar su área asignada.*
+
+3. *GridLayout*
+
+*Organiza los componentes en una cuadrícula de filas y columnas de tamaño fijo. Todos los componentes en un GridLayout tienen el mismo tamaño.*
 
 - Ejemplo
 
-[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/DialogsetsetTitle.java)
+[FlowLayout](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialoFlowLayout.java)
+
+[BorderLayout](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogBorderLayout.java)
+
+[GridLayout](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogGridLayout.java)
 
 ---
 
