@@ -181,7 +181,7 @@ Agregar setVisible
 
 - Ejemplo
 
-[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/DialogsetsetTitle.java)
+[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetTitle.java)
 
 ---
 
