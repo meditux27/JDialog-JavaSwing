@@ -295,29 +295,32 @@ Agregar setVisible
 
 ---
 
-:beginner: ()
+:beginner: setModalityType()
 
 - Descripción
 
-Establece el título del cuadro de diálogo.
+Este método permite especificar cómo el diálogo interactúa con otras ventanas y componentes de la aplicación.
 
 - Sintaxis
 
-dialog.setTitle("String");
+dialog.setModalityType(ModalityType.APPLICATION_MODAL);
+
+dialog2.setModalityType(ModalityType.DOCUMENT_MODAL);
+
+dialog3.setModalityType(ModalityType.MODELESS);
 
 - Nota
 
-Para el uso del metodo setTitle se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .setTitle("Titulo Personalizado")
+El método `setModalityType` toma un argumento del tipo `Dialog.ModalityType`, que puede ser uno de los siguientes:
 
-Crear un JDialog  
-`JDialog dialog = new JDialog(frame, true);`
+1. `Dialog.ModalityType.APPLICATION_MODAL`: Este tipo de modalidad hace que el diálogo sea modal para su aplicación, lo que significa que bloqueará la interacción con otras partes de la aplicación mientras esté abierto. El usuario debe cerrar el diálogo antes de poder interactuar con otras ventanas de la misma aplicación.
 
-Agregar setVisible  
-`dialog.setTitle("Titulo de JDialog Personalizado");`
+2. `Dialog.ModalityType.DOCUMENT_MODAL`: Este tipo de modalidad hace que el diálogo sea modal solo para el documento principal de la aplicación, lo que significa que bloqueará la interacción con otras ventanas del mismo documento principal mientras esté abierto.
 
+3. `Dialog.ModalityType.MODELESS`: Este tipo de modalidad hace que el diálogo sea no modal, lo que significa que no bloqueará la interacción con otras partes de la aplicación mientras esté abierto. El usuario puede interactuar con otras ventanas y componentes mientras el diálogo está en pantalla.
 - Ejemplo
 
-[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/DialogsetsetTitle.java)
+[setModalityType](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetModalityType.java)
 
 ---
 
