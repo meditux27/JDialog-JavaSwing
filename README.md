@@ -95,7 +95,7 @@ Pasos para implementar JDialog
 
 ---
 
-> :beginner: setVisible
+> :beginner: setVisible()
 
 - Descripción
 
@@ -109,10 +109,10 @@ dialog.setVisible(boolean);
 
 Para el uso del metodo setVisible se debe instanciar JDialogs, posteriormente llamar la variable asignada y agregar .setVisible(true o false)
 
-<sub> Crear un JFrame</sub>  
+<sub> Crear un JDialog</sub>  
 `JDialog dialog = new JDialog(frame, "Cuadro de Diálogo", true);`
 
-<sub>Agregar setTitle </sub>  
+<sub>Agregar setVisible </sub>  
 `dialog.setVisible("true");`
 
 - Ejemplo
@@ -121,28 +121,40 @@ Para el uso del metodo setVisible se debe instanciar JDialogs, posteriormente ll
 
 ---
 
-> :beginner: setSize(int width, int height)
+> :beginner: setDefaultCloseOperation()
 
 - Descripción
 
-Establece el tamaño inicial de la ventana en píxeles
+Configura el comportamiento de cierre del cuadro de diálogo. Puedes establecer si el cuadro de diálogo debe ocultarse, eliminarse o no hacer nada cuando se cierre.
 
 - Sintaxis
 
-frame.setSize(800,600);
+setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+
+setDefaultCloseOperation(JDialog.HIDE_ON_CLOSE);
+
+setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 
 - Nota
 
-Para el uso del metodo setSize se debe instanciar JFrame, posteriormente llamar la variable asignada y agregar .setSize(400,400)
+La constante `setDefaultCloseOperation` toma un valor de tipo `int` que puede ser uno de los siguientes:
 
-Crear un JFrame  
-`JFrame frame = new JFrame();`
+- `JDialog.DO_NOTHING_ON_CLOSE`: No se realiza ninguna acción cuando el usuario intenta cerrar el diálogo.
+- `JDialog.HIDE_ON_CLOSE`: El diálogo se oculta pero no se destruye cuando el usuario intenta cerrarlo.
+- `JDialog.DISPOSE_ON_CLOSE`: El diálogo se cierra y se destruye cuando el usuario intenta cerrarlo. Esto libera todos los recursos asociados al diálogo.
+
+Crear un JDialog  
+`JDialog dialog = new JDialog();`
 
 Agregar setTitle  
-`frame.setSize(400,400);`
+`dialog.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);`
 
 - Ejemplo
 
-[setSize](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetSize.java)
+[DO_NOTHING_ON_CLOSE](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetSize.java)
+
+[HIDE_ON_CLOSE](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetSize.java)
+
+[DISPOSE_ON_CLOSE](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetSize.java)
 
 ---
