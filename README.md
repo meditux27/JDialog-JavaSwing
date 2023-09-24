@@ -151,10 +151,10 @@ Agregar setTitle
 
 - Ejemplo
 
-[DO_NOTHING_ON_CLOSE](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetSize.java)
+[DO_NOTHING_ON_CLOSE](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetDefaultCloseOperation.java)
 
-[HIDE_ON_CLOSE](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetSize.java)
+[HIDE_ON_CLOSE](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetDefaultCloseOperationHIDE.java)
 
-[DISPOSE_ON_CLOSE](https://github.com/meditux27/JFrame-JavaSwing/blob/main/Example/JFrameSetSize.java)
+[DISPOSE_ON_CLOSE](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetDefaultCloseOperationDISPOSE.java)
 
 ---
