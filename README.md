@@ -263,6 +263,142 @@ Establece el administrador de diseño del panel para controlar la disposición d
 
 ---
 
+:beginner: setResizable()
+
+- Descripción
+
+Permite o deshabilita la capacidad de redimensionar el cuadro de diálogo por parte del usuario.
+
+- Sintaxis
+
+dialog.setResizable(true|false);
+
+- Nota
+
+Si estableces `resizable` en `true`, el usuario podrá ajustar el tamaño del diálogo mediante la manipulación de los bordes o esquinas de la ventana del diálogo. Si estableces `resizable` en `false`, el usuario no podrá redimensionar el diálogo.
+
+Por defecto, la mayoría de los `JDialogs` son redimensionables, lo que significa que `setResizable(true)` es el comportamiento predeterminado.
+
+
+
+Para el uso del metodo setTitle se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .setResizable(true);
+
+Crear un JDialog  
+`JDialog dialog = new JDialog(frame,"Ejemplo JDialog");`
+
+Agregar setVisible  
+`dialog.setResizable(true);`
+
+- Ejemplo
+
+[setResizable](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/Dialogsetresizable.java)
+
+---
+
+:beginner: ()
+
+- Descripción
+
+Establece el título del cuadro de diálogo.
+
+- Sintaxis
+
+dialog.setTitle("String");
+
+- Nota
+
+Para el uso del metodo setTitle se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .setTitle("Titulo Personalizado")
+
+Crear un JDialog  
+`JDialog dialog = new JDialog(frame, true);`
+
+Agregar setVisible  
+`dialog.setTitle("Titulo de JDialog Personalizado");`
+
+- Ejemplo
+
+[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/DialogsetsetTitle.java)
+
+---
+
+:beginner: ()
+
+- Descripción
+
+Establece el título del cuadro de diálogo.
+
+- Sintaxis
+
+dialog.setTitle("String");
+
+- Nota
+
+Para el uso del metodo setTitle se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .setTitle("Titulo Personalizado")
+
+Crear un JDialog  
+`JDialog dialog = new JDialog(frame, true);`
+
+Agregar setVisible  
+`dialog.setTitle("Titulo de JDialog Personalizado");`
+
+- Ejemplo
+
+[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/DialogsetsetTitle.java)
+
+---
+
+:beginner: ()
+
+- Descripción
+
+Establece el título del cuadro de diálogo.
+
+- Sintaxis
+
+dialog.setTitle("String");
+
+- Nota
+
+Para el uso del metodo setTitle se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .setTitle("Titulo Personalizado")
+
+Crear un JDialog  
+`JDialog dialog = new JDialog(frame, true);`
+
+Agregar setVisible  
+`dialog.setTitle("Titulo de JDialog Personalizado");`
+
+- Ejemplo
+
+[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/DialogsetsetTitle.java)
+
+---
+
+:beginner: ()
+
+- Descripción
+
+Establece el título del cuadro de diálogo.
+
+- Sintaxis
+
+dialog.setTitle("String");
+
+- Nota
+
+Para el uso del metodo setTitle se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .setTitle("Titulo Personalizado")
+
+Crear un JDialog  
+`JDialog dialog = new JDialog(frame, true);`
+
+Agregar setVisible  
+`dialog.setTitle("Titulo de JDialog Personalizado");`
+
+- Ejemplo
+
+[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/DialogsetsetTitle.java)
+
+---
+
 :beginner: ()
 
 - Descripción
