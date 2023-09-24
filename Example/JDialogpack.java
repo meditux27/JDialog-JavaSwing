@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class JDialogsetTitle {//Modificar el nombre de la clase a su preferencia o realizar una nueva clase con el nombre presente
+public class JDialogpack {//Modificar el nombre de la clase a su preferencia o realizar una nueva clase con el nombre presente
     public static void main(String[] args) {
     	
         JFrame frame = new JFrame("Ejemplo de setDefaultCloseOperation");
@@ -14,21 +14,23 @@ public class JDialogsetTitle {//Modificar el nombre de la clase a su preferencia
         frame.setSize(400, 300);
      // Establece la posición incial al ejecutar 
         frame.setLocationRelativeTo(null);
-        
+       
+        JLabel label=new JLabel("Agregando texto");
        JButton showDialogButton = new JButton("Mostrar Cuadro de Diálogo");
+       
 
         showDialogButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Crear una instancia de JDialog con el JFrame como propietario
-                JDialog dialog = new JDialog(frame, false);
+                JDialog dialog = new JDialog(frame,"JDialog" ,false);
 
-                // Configurar el tamaño del cuadro de diálogo
-                dialog.setSize(200, 100);
+                //Agrega la etiqueta al interior de JDialog
+                dialog.add(label);
                 
-                
-                //Establece el titulo personalizado en  JDialog
-                dialog.setTitle("Hola desde JDialog");
+                //Agregando el metodo pack el redimensionado de la ventana
+                dialog.pack();
+              
                                                             
                 // Hacer visible el cuadro de diálogo
                 dialog.setVisible(true);
@@ -43,5 +45,6 @@ public class JDialogsetTitle {//Modificar el nombre de la clase a su preferencia
 
         frame.add(showDialogButton);
         frame.setVisible(true);
+        
     }
 }

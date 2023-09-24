@@ -187,29 +187,31 @@ Agregar setVisible
 
 
 
-:beginner: ()
+:beginner: pack()
 
 - Descripción
 
-Establece el título del cuadro de diálogo.
+ Redimensiona automáticamente el cuadro de diálogo para que se ajuste al contenido que contiene.
 
 - Sintaxis
 
-dialog.setTitle("String");
+dialog.pack();
 
 - Nota
 
-Para el uso del metodo setTitle se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .setTitle("Titulo Personalizado")
+El método `pack()` se utiliza en un `JDialog` de la misma manera que se utiliza en un `JFrame`. Su propósito es ajustar automáticamente el tamaño del diálogo para que se ajuste a su contenido de manera adecuada, lo que significa que el diálogo tomará el tamaño mínimo necesario para mostrar todos los componentes internos de manera adecuada.
+
+Para el uso del metodo pack se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .pack();
 
 Crear un JDialog  
-`JDialog dialog = new JDialog(frame, true);`
+`JDialog dialog = new JDialog(frame,"JDialog", true);`
 
 Agregar setVisible  
-`dialog.setTitle("Titulo de JDialog Personalizado");`
+`dialog.pack();`
 
 - Ejemplo
 
-[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/DialogsetsetTitle.java)
+[pack](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogpack.java)
 
 ---
 
