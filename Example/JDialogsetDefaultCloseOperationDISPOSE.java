@@ -41,7 +41,7 @@ public class JDialogsetDefaultCloseOperationDISPOSE {//Modificar el nombre de la
                 dialog.add(closeButton);
                 // Hacer visible el cuadro de diálogo
                 dialog.setVisible(true);
-                //Agregando JDialog.DO_NOTHING_ON_CLOSE esto indica que no debe funcionar el botón de cerrar de la ventana
+                //Agregando JDialog.HIDE_ON_CLOSE`: El diálogo se oculta pero no se destruye cuando el usuario intenta cerrarlo.
                 dialog.setDefaultCloseOperation(JDialog.HIDE_ON_CLOSE);
                 
                 dialog.setLocationRelativeTo(frame);

@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class JDialogsetDefaultCloseOperationHIDE {//Modificar el nombre de la clase a su preferencia o realizar una nueva clase con el nombre presente
+public class JDialogsetTitle {//Modificar el nombre de la clase a su preferencia o realizar una nueva clase con el nombre presente
     public static void main(String[] args) {
     	
         JFrame frame = new JFrame("Ejemplo de setDefaultCloseOperation");
@@ -21,30 +21,22 @@ public class JDialogsetDefaultCloseOperationHIDE {//Modificar el nombre de la cl
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Crear una instancia de JDialog con el JFrame como propietario
-                JDialog dialog = new JDialog(frame, "Cuadro de Diálogo", false);
+                JDialog dialog = new JDialog(frame, false);
 
                 // Configurar el tamaño del cuadro de diálogo
                 dialog.setSize(200, 100);
-
-                // Agregar un botón para cerrar el cuadro de diálogo
-                JButton closeButton = new JButton("Cerrar");
-                //Establece el comportamiento al presionar el botón
-                closeButton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        // Ocultar el cuadro de diálogo cuando se hace clic en el botón "Cerrar"
-                    	dialog.setVisible(false);
-                       
-                    }
-                });
-                //Agregaga el botón al cuadro de dialogo
-                dialog.add(closeButton);
+                
+                
+                //Establece el titulo personalizado en  JDialog
+                dialog.setTitle("Hola desde JDialog");
+                                                            
                 // Hacer visible el cuadro de diálogo
                 dialog.setVisible(true);
-                //Agregando JDialog.DISPOSE_ON_CLOSE`: El diálogo se cierra y se destruye cuando el usuario intenta cerrarlo. Esto libera todos los recursos asociados al diálogo.
-                dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-                
+                //El JDialog se ubican en relación a frame
                 dialog.setLocationRelativeTo(frame);
+                //El diálogo se cierra y se destruye
+                dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+               
                 
             }
         });

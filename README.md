@@ -158,3 +158,109 @@ Agregar setTitle
 [DISPOSE_ON_CLOSE](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetDefaultCloseOperationDISPOSE.java)
 
 ---
+
+:beginner: setTitle()
+
+- Descripción
+
+Establece el título del cuadro de diálogo.
+
+- Sintaxis
+
+dialog.setTitle("String");
+
+- Nota
+
+Para el uso del metodo setTitle se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .setTitle("Titulo Personalizado")
+
+Crear un JDialog  
+`JDialog dialog = new JDialog(frame, true);`
+
+Agregar setVisible  
+`dialog.setTitle("Titulo de JDialog Personalizado");`
+
+- Ejemplo
+
+[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/DialogsetsetTitle.java)
+
+---
+
+
+
+:beginner: ()
+
+- Descripción
+
+Establece el título del cuadro de diálogo.
+
+- Sintaxis
+
+dialog.setTitle("String");
+
+- Nota
+
+Para el uso del metodo setTitle se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .setTitle("Titulo Personalizado")
+
+Crear un JDialog  
+`JDialog dialog = new JDialog(frame, true);`
+
+Agregar setVisible  
+`dialog.setTitle("Titulo de JDialog Personalizado");`
+
+- Ejemplo
+
+[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/DialogsetsetTitle.java)
+
+---
+
+:beginner: ()
+
+- Descripción
+
+Establece el título del cuadro de diálogo.
+
+- Sintaxis
+
+dialog.setTitle("String");
+
+- Nota
+
+Para el uso del metodo setTitle se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .setTitle("Titulo Personalizado")
+
+Crear un JDialog  
+`JDialog dialog = new JDialog(frame, true);`
+
+Agregar setVisible  
+`dialog.setTitle("Titulo de JDialog Personalizado");`
+
+- Ejemplo
+
+[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/DialogsetsetTitle.java)
+
+---
+
+:beginner: ()
+
+- Descripción
+
+Establece el título del cuadro de diálogo.
+
+- Sintaxis
+
+dialog.setTitle("String");
+
+- Nota
+
+Para el uso del metodo setTitle se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .setTitle("Titulo Personalizado")
+
+Crear un JDialog  
+`JDialog dialog = new JDialog(frame, true);`
+
+Agregar setVisible  
+`dialog.setTitle("Titulo de JDialog Personalizado");`
+
+- Ejemplo
+
+[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/DialogsetsetTitle.java)
+
+---
