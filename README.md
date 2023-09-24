@@ -291,7 +291,7 @@ Agregar setVisible
 
 - Ejemplo
 
-[setResizable](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/Dialogsetresizable.java)
+[setResizable](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetresizable.java)
 
 ---
 
