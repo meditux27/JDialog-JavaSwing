@@ -49,9 +49,8 @@ Pasos para implementar JDialog
    `JFrame frame = new JFrame("Ventana Principal"); `
    
    `JDialog dialog = new JDialog(frame, "Cuadro de Diálogo", true);`
-
+   
    Explicación detallada de cada argumento:
-
 - `frame`: Este es el propietario del cuadro de diálogo, generalmente un `JFrame` que representa la ventana principal de tu aplicación. El cuadro de diálogo estará asociado a esta ventana y bloqueará la interacción con ella mientras esté visible.
 
 - `"Cuadro de Diálogo"`: Este es el título del cuadro de diálogo. Aparecerá en la barra de título de la ventana del cuadro de diálogo.
@@ -185,8 +184,6 @@ Agregar setVisible
 
 ---
 
-
-
 :beginner: pack()
 
 - Descripción
@@ -279,8 +276,6 @@ Si estableces `resizable` en `true`, el usuario podrá ajustar el tamaño del di
 
 Por defecto, la mayoría de los `JDialogs` son redimensionables, lo que significa que `setResizable(true)` es el comportamiento predeterminado.
 
-
-
 Para el uso del metodo setTitle se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .setResizable(true);
 
 Crear un JDialog  
@@ -324,29 +319,28 @@ El método `setModalityType` toma un argumento del tipo `Dialog.ModalityType`, q
 
 ---
 
-:beginner: ()
+:beginner: dispose()
 
 - Descripción
 
-Establece el título del cuadro de diálogo.
+Libera los recursos utilizados por el cuadro de diálogo cuando ya no se necesita
 
 - Sintaxis
 
-dialog.setTitle("String");
+dialog.dispose();
 
 - Nota
 
-Para el uso del metodo setTitle se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .setTitle("Titulo Personalizado")
+el método `dispose()` es un método que se utiliza para liberar los recursos asociados a la ventana y cerrarla de manera apropiada. Cuando se llama al método `dispose()` en un `JDialog`, se realizan varias acciones importantes:
 
-Crear un JDialog  
-`JDialog dialog = new JDialog(frame, true);`
+1. Se liberan los recursos de memoria utilizados por la ventana de diálogo y sus componentes, lo que ayuda a prevenir posibles fugas de memoria.
 
-Agregar setVisible  
-`dialog.setTitle("Titulo de JDialog Personalizado");`
+2. La ventana de diálogo se cierra y ya no es visible.
 
+3. Se notifica al sistema de ventanas (en el sistema operativo subyacente) que la ventana de diálogo debe ser eliminada, lo que puede liberar recursos adicionales del sistema.
 - Ejemplo
 
-[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/DialogsetsetTitle.java)
+[dispose](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogdispose.java)
 
 ---
 
