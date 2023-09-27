@@ -360,9 +360,10 @@ Donde `dialog` es un objeto de tipo `JDialog`, y `componente` es el componente g
 
 Por ejemplo, para agregar una etiqueta (`JLabel`) al diálogo:
 
-`JDialog dialog = new JDialog();
-JLabel label = new JLabel("Hola, mundo!");
-dialog.add(label);`
+`JDialog dialog = new JDialog();`
+
+`JLabel label = new JLabel("Hola, mundo!");`
+`dialog.add(label);`
 
 
 
