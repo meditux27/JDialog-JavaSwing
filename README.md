@@ -344,29 +344,31 @@ el método `dispose()` es un método que se utiliza para liberar los recursos as
 
 ---
 
-:beginner: ()
+:beginner: add()
 
 - Descripción
 
-Establece el título del cuadro de diálogo.
+Se utiliza para agregar componentes gráficos (como botones, etiquetas, campos de texto, etc.
 
 - Sintaxis
 
-dialog.setTitle("String");
+dialog.add(componente);
 
 - Nota
 
-Para el uso del metodo setTitle se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .setTitle("Titulo Personalizado")
+Donde `dialog` es un objeto de tipo `JDialog`, y `componente` es el componente gráfico que deseas agregar al diálogo.
 
-Crear un JDialog  
-`JDialog dialog = new JDialog(frame, true);`
+Por ejemplo, para agregar una etiqueta (`JLabel`) al diálogo:
 
-Agregar setVisible  
-`dialog.setTitle("Titulo de JDialog Personalizado");`
+`JDialog dialog = new JDialog();
+JLabel label = new JLabel("Hola, mundo!");
+dialog.add(label);`
+
+
 
 - Ejemplo
 
-[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/DialogsetsetTitle.java)
+[add](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogadd.java)
 
 ---
 
