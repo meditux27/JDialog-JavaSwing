@@ -384,7 +384,7 @@ dialog.setVisible(false|true);
 
 - Nota
 
-Este método toma un argumento booleano, que especifica si se debe mostrar (`true`) o ocultar (`false`) el componente. Cuando se llama a `setVisible(true)` en un `JDialog`, la ventana de diálogo se muestra en la pantalla y se vuelve interactiva para el usuario. Por otro lado, si se llama a `setVisible(false)`, la ventana se oculta y ya no es visible para el usuario.
+Este método toma un argumento booleano, que especifica si se debe mostrar (`true`) o ocultar (`false`) el componente. Cuando se llama a `setVisible(true)` en un `JDialog`, la ventana de diálogo se muestra en la pantalla y se vuelve interactiva para el usuario. Por* *otro lado, si se llama a `setVisible(false)`, la ventana se oculta y ya no es visible para el usuario.
 
 Crear un JDialog
 
@@ -402,28 +402,38 @@ Agregar el metodo setVisible
 
 ---
 
-:beginner: ()
+:beginner: setLocationRelativeTo()
 
 - Descripción
 
-Establece el título del cuadro de diálogo.
+Propiedad que especifica un componente relativo al cual se posicionará el cuadro de diálogo.
+
+
 
 - Sintaxis
 
-dialog.setTitle("String");
+dialog.setLocationRelativeTo(null);
 
 - Nota
 
-Para el uso del metodo setTitle se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .setTitle("Titulo Personalizado")
+La forma más común de usar `setLocationRelativeTo` es proporcionar una referencia al componente o ventana con respecto a la cual deseas posicionar la ventana de diálogo. El método calculará automáticamente la posición de la ventana de diálogo de manera que esté centrada con respecto a ese componente de referencia.
 
 Crear un JDialog  
 `JDialog dialog = new JDialog(frame, true);`
 
 Agregar setVisible  
-`dialog.setTitle("Titulo de JDialog Personalizado");`
+`dialog.setLocationRelativeTo(null);`
+
+
+
+Cuando utilizas `.setLocationRelativeTo(null)` en un `JDialog`, estás configurando la posición de la ventana de diálogo de tal manera que se centre en el medio de la pantalla en lugar de en relación con otro componente específico, como una ventana principal.
+
+En otras palabras, al pasar `null` como argumento a `setLocationRelativeTo`, le estás indicando al sistema que la ventana de diálogo debe aparecer en el centro de la pantalla independientemente de la ubicación de otras ventanas o componentes en la interfaz de usuario. Esto es útil cuando deseas que la ventana de diálogo sea independiente y aparezca en el centro de la pantalla sin importar la posición de otras ventanas.
+
+
 
 - Ejemplo
 
-[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/DialogsetsetTitle.java)
+[setLocationRelativeTo](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetLocationRelativeTo.java)
 
 ---
