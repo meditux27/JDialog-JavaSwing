@@ -281,7 +281,7 @@ Para el uso del metodo setTitle se debe instanciar JDialog, posteriormente llama
 Crear un JDialog  
 `JDialog dialog = new JDialog(frame,"Ejemplo JDialog");`
 
-Agregar setVisible  
+Agregar setResizable  
 `dialog.setResizable(true);`
 
 - Ejemplo
@@ -360,12 +360,11 @@ Donde `dialog` es un objeto de tipo `JDialog`, y `componente` es el componente g
 
 Por ejemplo, para agregar una etiqueta (`JLabel`) al diálogo:
 
-`JDialog dialog = new JDialog();`
+JDialog dialog = new JDialog();
 
-`JLabel label = new JLabel("Hola, mundo!");`
-`dialog.add(label);`
+JLabel label = new JLabel("Hola, mundo!");
 
-
+dialog.add(label);
 
 - Ejemplo
 
@@ -373,29 +372,33 @@ Por ejemplo, para agregar una etiqueta (`JLabel`) al diálogo:
 
 ---
 
-:beginner: ()
+:beginner: setVisible()
 
 - Descripción
 
-Establece el título del cuadro de diálogo.
+Es un método utilizado para cambiar la visibilidad de un componente gráfico, como un `JDialog`.
 
 - Sintaxis
 
-dialog.setTitle("String");
+dialog.setVisible(false|true);
 
 - Nota
 
-Para el uso del metodo setTitle se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .setTitle("Titulo Personalizado")
+Este método toma un argumento booleano, que especifica si se debe mostrar (`true`) o ocultar (`false`) el componente. Cuando se llama a `setVisible(true)` en un `JDialog`, la ventana de diálogo se muestra en la pantalla y se vuelve interactiva para el usuario. Por otro lado, si se llama a `setVisible(false)`, la ventana se oculta y ya no es visible para el usuario.
 
-Crear un JDialog  
-`JDialog dialog = new JDialog(frame, true);`
+Crear un JDialog
 
-Agregar setVisible  
-`dialog.setTitle("Titulo de JDialog Personalizado");`
+`JDialog dialog = new JDialog(frame, "Mi JDialog", true);`
+
+Agregar el metodo setVisible
+
+`dialog.setVisible(true);`
+
+
 
 - Ejemplo
 
-[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/DialogsetsetTitle.java)
+[setVisible](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetVisible.java)
 
 ---
 
