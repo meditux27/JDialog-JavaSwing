@@ -1,6 +1,6 @@
 # JDialog - JavaSwing
 
-<img title="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR__OoKLbDv-WH9nPOPVa3F8mR4qjnZhnsGCw&usqp=CAU" alt="" data-align="inline" width="412">
+<img title="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR__OoKLbDv-WH9nPOPVa3F8mR4qjnZhnsGCw&usqp=CAU" alt="" data-align="inline" width="374">
 
 #### Un JDialog se utiliza para crear y mostrar cuadros de diálogo en aplicaciones de escritorio.
 
@@ -12,91 +12,92 @@
 
 
 
-- Ventana de diálogo: Un JDialog es una ventana que generalmente se utiliza para interactuar con el usuario en forma de diálogo. Puede mostrar información, solicitar entrada o realizar acciones específicas.
+1. **Ventana de diálogo**: Un JDialog es una ventana que generalmente se utiliza para interactuar con el usuario en forma de diálogo. Puede mostrar información, solicitar entrada o realizar acciones específicas.
 
-- Modalidad: Un JDialog puede ser modal o no modal. Una ventana modal bloquea la interacción con otras partes de la aplicación hasta que se cierre, mientras que una ventana no modal permite que el usuario interactúe con otras partes de la aplicación mientras la ventana de diálogo está abierta.
+2. **Modalidad**: Un JDialog puede ser modal o no modal. Una ventana modal bloquea la interacción con otras partes de la aplicación hasta que se cierre, mientras que una ventana no modal permite que el usuario interactúe con otras partes de la aplicación mientras la ventana de diálogo está abierta.
 
-- Decoración personalizable: Puedes personalizar la decoración de un JDialog para incluir botones de cierre, minimizar y maximizar según tus necesidades.
+3. **Decoración personalizable**: Puedes personalizar la decoración de un JDialog para incluir botones de cierre, minimizar y maximizar según tus necesidades.
 
-- Layout personalizable: Al igual que otros componentes Swing, puedes personalizar la disposición de los elementos dentro del JDialog utilizando administradores de diseño (LayoutManager) como FlowLayout, GridLayout, BorderLayout, etc.
+4. **Layout personalizable**: Al igual que otros componentes Swing, puedes personalizar la disposición de los elementos dentro del JDialog utilizando administradores de diseño (LayoutManager) como FlowLayout, GridLayout, BorderLayout, etc.
 
-- Eventos y acciones: Puedes agregar oyentes de eventos para responder a acciones del usuario, como hacer clic en botones, escribir texto en campos de entrada, cerrar la ventana, etc.
+5. **Eventos y acciones**: Puedes agregar oyentes de eventos para responder a acciones del usuario, como hacer clic en botones, escribir texto en campos de entrada, cerrar la ventana, etc.
 
-- Componentes personalizables: Puedes agregar una variedad de componentes como etiquetas (JLabel), botones (JButton), campos de texto (JTextField), listas (JList), etc., a un JDialog para construir la interfaz de usuario deseada.
+6. **Componentes personalizables**: Puedes agregar una variedad de componentes como etiquetas (JLabel), botones (JButton), campos de texto (JTextField), listas (JList), etc., a un JDialog para construir la interfaz de usuario deseada.
 
-- Título y etiquetas: Puedes establecer un título para el JDialog utilizando el método setTitle() y agregar etiquetas para describir los elementos de la ventana de diálogo.
+7. **Título y etiquetas**: Puedes establecer un título para el JDialog utilizando el método setTitle() y agregar etiquetas para describir los elementos de la ventana de diálogo.
 
-- Tamaño y posición: Puedes controlar el tamaño y la posición de un JDialog utilizando métodos como setSize(), setLocation(), setBounds(), etc.
+8. **Tamaño y posición**: Puedes controlar el tamaño y la posición de un JDialog utilizando métodos como setSize(), setLocation(), setBounds(), etc.
 
-- Cierre y respuesta del usuario: Puedes obtener la respuesta del usuario a través de los componentes de la ventana de diálogo y controlar el cierre del diálogo según las acciones del usuario.
+9. **Cierre y respuesta del usuario**: Puedes obtener la respuesta del usuario a través de los componentes de la ventana de diálogo y controlar el cierre del diálogo según las acciones del usuario.
 
 ---
 
-Pasos para implementar JDialog
+:clipboard: **Pasos para implementar JDialog**
 
-1. **Importar las clases necesarias:** Asegúrate de importar las clases necesarias al principio de tu archivo Java. 
+1. **Importar las clases necesarias:** 
    
-   `import javax.swing.*;`
+    Asegúrate de importar las clases necesarias de Swing.
    
-   `import java.awt.*;` 
-   
-   `import java.awt.event.ActionEvent;`
-   
-   `import java.awt.event.ActionListener;`
+   ```java
+   import javax.swing.*;
+   ```
 
-2. **Crear una instancia de JDialog:** Crea una instancia de `JDialog` utilizando uno de los constructores disponibles. Puedes especificar el propietario de la ventana principal (un `JFrame`, por ejemplo), el título y si deseas que el cuadro de diálogo sea modal o no.
+2. **Crear una instancia de JDialog:** 
    
-   `JFrame frame = new JFrame("Ventana Principal"); `
+   Crea una instancia de JDialog utilizando uno de los constructores disponibles. Puedes especificar el propietario de la ventana principal (un `JFrame`, por ejemplo), el título y si deseas que el cuadro de diálogo sea modal o no.
    
-   `JDialog dialog = new JDialog(frame, "Cuadro de Diálogo", true);`
+   ```java
+   JFrame frame = new JFrame("Ventana Principal");
+   JDialog dialog = new JDialog(frame, "Cuadro de Diálogo", true);
+   ```
    
    Explicación detallada de cada argumento:
 - `frame`: Este es el propietario del cuadro de diálogo, generalmente un `JFrame` que representa la ventana principal de tu aplicación. El cuadro de diálogo estará asociado a esta ventana y bloqueará la interacción con ella mientras esté visible.
 
-- `"Cuadro de Diálogo"`: Este es el título del cuadro de diálogo. Aparecerá en la barra de título de la ventana del cuadro de diálogo.
+- `Cuadro de Diálogo`: Este es el título del cuadro de diálogo. Aparecerá en la barra de título de la ventana del cuadro de diálogo.
 
 - `true`: Este argumento establece si el cuadro de diálogo es modal o no. Cuando se establece en `true`, el cuadro de diálogo es modal, lo que significa que bloqueará la interacción con la ventana principal hasta que se cierre. Los cuadros de diálogo modales son útiles cuando deseas que el usuario complete una tarea o tome una decisión antes de continuar con la aplicación principal.
 3. **Agregar componentes al JDialog:** Agrega los componentes de interfaz de usuario (botones, etiquetas, campos de texto, etc.) al cuadro de diálogo utilizando métodos como `add(component)` y personaliza su diseño según sea necesario.
    
-   `JButton button = new JButton("Aceptar"); `
-   
-   `button.addActionListener(new ActionListener() {     `
-   
-   `public void actionPerformed(ActionEvent e) {         `
-   
-   `// Lógica para manejar el botón "Aceptar" aquí         `
-   
-   `dialog.dispose(); // Cierra el cuadro de diálogo     `
-   
-   `} }); `
-   
-   `dialog.add(button);`
+   ```java
+   JLabel label = new JLabel("Este es un cuadro de diálogo de ejemplo.");
+   dialog.add(label);
+   ```
 
-4. **Configurar el cierre del JDialog:** Decide qué sucede cuando se cierra el cuadro de diálogo utilizando el método `setDefaultCloseOperation(int operation)`. Puedes configurarlo para que el cuadro de diálogo se oculte, se elimine o no haga nada al cerrarse.
+4. **Configurar el cierre del JDialog:** 
    
-   `dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE); // Ocultar el cuadro de diálogo al cerrarlo`
+   Decide qué sucede cuando se cierra el cuadro de diálogo utilizando el método `setDefaultCloseOperation(int operation)`. Puedes configurarlo para que el cuadro de diálogo se oculte, se elimine o no haga nada al cerrarse.
+   
+   ```java
+   dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+   ```
 
 5. **Mostrar el JDialog:** Finalmente, muestra el cuadro de diálogo utilizando el método `setVisible(true)`.
    
-   `dialog.pack(); // Redimensiona el cuadro de diálogo para ajustarse al contenido dialog.setVisible(true); // Muestra el cuadro de diálogo`
+   ```java
+   dialog.setVisible(true);
+   ```
 
-6. **Manejar eventos y respuestas del usuario:** Agrega manejadores de eventos a los componentes dentro del cuadro de diálogo para responder a las acciones del usuario, como hacer clic en botones.
+6. **Manejar eventos y respuestas del usuario:** 
    
-   `button.addActionListener(new ActionListener() {     `
+   Agrega manejadores de eventos a los componentes dentro del cuadro de diálogo es un comportamiento comun, por lo cual se puede utilizar elementos tales como botones que pueden manipular el comportamiento del mismo JDialog o algun otro elemento.
    
-   `public void actionPerformed(ActionEvent e) {         `
+   ```java
+   JButton button=new JButton("Boton interno");
+   button.addActionListener(new ActionListener() {
+   public void actionPerformed(ActionEvent e) {
+   // Cierra el cuadro de diálogo
+   dialog.dispose(); 
+   } });
+   ```
    
-   `// Lógica para manejar el botón "Aceptar" aquí         `
    
-   `dialog.dispose(); // Cierra el cuadro de diálogo     `
-   
-   `} });`
 
-[Estructura basica](https://github.com/meditux27/JDialog-JavaSwing/blob/main/basic/MyDialogExample.java)
+:coffee:[Estructura basica](https://github.com/meditux27/JDialog-JavaSwing/blob/main/basic/MyDialogExample.java)
 
 ---
 
-> :beginner: setVisible()
+> :beginner: **setVisible()**
 
 - Descripción
 
@@ -104,7 +105,9 @@ Muestra u oculta el cuadro de dialogo
 
 - Sintaxis
 
-dialog.setVisible(boolean);
+```java
+dialog.setVisible(true);
+```
 
 - Nota
 
@@ -118,11 +121,11 @@ Para el uso del metodo setVisible se debe instanciar JDialogs, posteriormente ll
 
 - Ejemplo
 
-[setVisible]( https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogVisibilityExample.java)
+:coffee:[setVisible]( https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogVisibilityExample.java)
 
 ---
 
-> :beginner: setDefaultCloseOperation()
+> :beginner: **setDefaultCloseOperation()**
 
 - Descripción
 
@@ -130,11 +133,17 @@ Configura el comportamiento de cierre del cuadro de diálogo. Puedes establecer 
 
 - Sintaxis
 
+```java
 setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+```
 
+```java
 setDefaultCloseOperation(JDialog.HIDE_ON_CLOSE);
+```
 
+```java
 setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+```
 
 - Nota
 
@@ -152,11 +161,11 @@ Agregar setTitle
 
 - Ejemplo
 
-[DO_NOTHING_ON_CLOSE](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetDefaultCloseOperation.java)
+:coffee:[DO_NOTHING_ON_CLOSE](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetDefaultCloseOperation.java)
 
-[HIDE_ON_CLOSE](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetDefaultCloseOperationHIDE.java)
+:coffee:[HIDE_ON_CLOSE](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetDefaultCloseOperationHIDE.java)
 
-[DISPOSE_ON_CLOSE](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetDefaultCloseOperationDISPOSE.java)
+:coffee:[DISPOSE_ON_CLOSE](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetDefaultCloseOperationDISPOSE.java)
 
 ---
 
