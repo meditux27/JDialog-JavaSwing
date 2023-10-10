@@ -1,16 +1,16 @@
 # JDialog - JavaSwing
 
-<img title="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR__OoKLbDv-WH9nPOPVa3F8mR4qjnZhnsGCw&usqp=CAU" alt="" data-align="inline" width="354">
+<img title="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR__OoKLbDv-WH9nPOPVa3F8mR4qjnZhnsGCw&usqp=CAU" alt="" data-align="inline" width="412">
 
-##### Un JDialog se utiliza para crear y mostrar cuadros de diálogo en aplicaciones de escritorio.
+#### Un JDialog se utiliza para crear y mostrar cuadros de diálogo en aplicaciones de escritorio.
 
-##### Un cuadro de diálogo es una ventana emergente que generalmente se utiliza para interactuar con el usuario de manera modal, lo que significa que el usuario debe completar la interacción con el cuadro de diálogo antes de volver a interactuar con la ventana principal de la aplicación
+#### Un cuadro de diálogo es una ventana emergente que generalmente se utiliza para interactuar con el usuario de manera modal, lo que significa que el usuario debe completar la interacción con el cuadro de diálogo antes de volver a interactuar con la ventana principal de la aplicación
 
 ---
 
-[Estructura basica](https://github.com/meditux27/JDialog-JavaSwing/blob/main/basic/MyDialogExample.java)
+:book: **Las características más importantes de un `JDialog` en Swing son las siguientes:**
 
-Aquí tienes algunas de las características más importantes de un JDialog:
+
 
 - Ventana de diálogo: Un JDialog es una ventana que generalmente se utiliza para interactuar con el usuario en forma de diálogo. Puede mostrar información, solicitar entrada o realizar acciones específicas.
 
@@ -91,6 +91,8 @@ Pasos para implementar JDialog
    `dialog.dispose(); // Cierra el cuadro de diálogo     `
    
    `} });`
+
+[Estructura basica](https://github.com/meditux27/JDialog-JavaSwing/blob/main/basic/MyDialogExample.java)
 
 ---
 
@@ -394,8 +396,6 @@ Agregar el metodo setVisible
 
 `dialog.setVisible(true);`
 
-
-
 - Ejemplo
 
 [setVisible](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetVisible.java)
@@ -407,8 +407,6 @@ Agregar el metodo setVisible
 - Descripción
 
 Propiedad que especifica un componente relativo al cual se posicionará el cuadro de diálogo.
-
-
 
 - Sintaxis
 
@@ -424,13 +422,9 @@ Crear un JDialog
 Agregar setVisible  
 `dialog.setLocationRelativeTo(null);`
 
-
-
 Cuando utilizas `.setLocationRelativeTo(null)` en un `JDialog`, estás configurando la posición de la ventana de diálogo de tal manera que se centre en el medio de la pantalla en lugar de en relación con otro componente específico, como una ventana principal.
 
 En otras palabras, al pasar `null` como argumento a `setLocationRelativeTo`, le estás indicando al sistema que la ventana de diálogo debe aparecer en el centro de la pantalla independientemente de la ubicación de otras ventanas o componentes en la interfaz de usuario. Esto es útil cuando deseas que la ventana de diálogo sea independiente y aparezca en el centro de la pantalla sin importar la posición de otras ventanas.
-
-
 
 - Ejemplo
 
