@@ -455,6 +455,6 @@ En otras palabras, al pasar `null` como argumento a `setLocationRelativeTo`, le 
 
 - Ejemplo
 
-:coffe:[setLocationRelativeTo](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetLocationRelativeTo.java)
+:coffee:[setLocationRelativeTo](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetLocationRelativeTo.java)
 
 ---
