@@ -10,8 +10,6 @@
 
 :book: **Las características más importantes de un `JDialog` en Swing son las siguientes:**
 
-
-
 1. **Ventana de diálogo**: Un JDialog es una ventana que generalmente se utiliza para interactuar con el usuario en forma de diálogo. Puede mostrar información, solicitar entrada o realizar acciones específicas.
 
 2. **Modalidad**: Un JDialog puede ser modal o no modal. Una ventana modal bloquea la interacción con otras partes de la aplicación hasta que se cierre, mientras que una ventana no modal permite que el usuario interactúe con otras partes de la aplicación mientras la ventana de diálogo está abierta.
@@ -90,8 +88,6 @@
    dialog.dispose(); 
    } });
    ```
-   
-   
 
 :coffee:[Estructura basica](https://github.com/meditux27/JDialog-JavaSwing/blob/main/basic/MyDialogExample.java)
 
@@ -169,7 +165,7 @@ Agregar setTitle
 
 ---
 
-:beginner: setTitle()
+> :beginner: **setTitle()**
 
 - Descripción
 
@@ -177,7 +173,9 @@ Establece el título del cuadro de diálogo.
 
 - Sintaxis
 
-dialog.setTitle("String");
+```java
+dialog.setTitle("Titulo personalizado");
+```
 
 - Nota
 
@@ -191,11 +189,11 @@ Agregar setVisible
 
 - Ejemplo
 
-[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetTitle.java)
+:coffee:[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetTitle.java)
 
 ---
 
-:beginner: pack()
+> :beginner: **pack()**
 
 - Descripción
 
@@ -203,11 +201,13 @@ Agregar setVisible
 
 - Sintaxis
 
+```java
 dialog.pack();
+```
 
 - Nota
 
-El método `pack()` se utiliza en un `JDialog` de la misma manera que se utiliza en un `JFrame`. Su propósito es ajustar automáticamente el tamaño del diálogo para que se ajuste a su contenido de manera adecuada, lo que significa que el diálogo tomará el tamaño mínimo necesario para mostrar todos los componentes internos de manera adecuada.
+El método `pack()` se utiliza en un JDialog de la misma manera que se utiliza en un `JFrame`. Su propósito es ajustar automáticamente el tamaño del diálogo para que se ajuste a su contenido de manera adecuada, lo que significa que el diálogo tomará el tamaño mínimo necesario para mostrar todos los componentes internos de manera adecuada.
 
 Para el uso del metodo pack se debe instanciar JDialog, posteriormente llamar la variable asignada y agregar .pack();
 
@@ -219,11 +219,11 @@ Agregar setVisible
 
 - Ejemplo
 
-[pack](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogpack.java)
+:coffee:[pack](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogpack.java)
 
 ---
 
-:beginner: setLayout(LayoutManager manager)
+> :beginner: **setLayout(LayoutManager manager)**
 
 - Descripción
 
@@ -235,43 +235,45 @@ Se puede utilizar de 2 maneras
 
 1. Creando la instancia de layout manager y asignando el nombre de la variable donde se guardo la instancia
 
-`GridLayout diseno = new GridLayout(3, 3);`
+```java
+GridLayout diseno = new GridLayout(3, 3);
+dialog.setLayout(diseno);
+```
 
-`dialog.setLayout(diseno);`
+Agregando directamente al panel mediante la instancia
 
-2. Agregando directamente al panel mediante la instancia
-
-`JDialog dialog = new JDialog(frame,"JDialog" ,false);`
-
-`dialog.setLayout(new FlowLayout());`
+```java
+JDialog dialog = new JDialog(frame,"JDialog" ,false);
+dialog.setLayout(new FlowLayout());
+```
 
 - Nota
 
 Establece el administrador de diseño del panel para controlar la disposición de los componentes anexados al JDialog, entre los mas utilizados son : `FlowLayout|GridLayout|BorderLayout`
 
-1. FlowLayout
+1. **FlowLayout**
 
 *Organiza los componentes en una fila horizontal o vertical, ajustándolos automáticamente a medida que se agregan. Es útil para diseños simples de una fila o una columna de componentes.*
 
-2. *BorderLayout*
+2. **BorderLayout**
 
 *Divide el contenedor en cinco áreas: norte, sur, este, oeste y centro. Cada área puede contener un solo componente, y los componentes se expanden para llenar su área asignada.*
 
-3. *GridLayout*
+3. **GridLayout**
 
 *Organiza los componentes en una cuadrícula de filas y columnas de tamaño fijo. Todos los componentes en un GridLayout tienen el mismo tamaño.*
 
 - Ejemplo
 
-[FlowLayout](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialoFlowLayout.java)
+:coffee:[FlowLayout](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialoFlowLayout.java)
 
-[BorderLayout](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogBorderLayout.java)
+:coffee:[BorderLayout](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogBorderLayout.java)
 
-[GridLayout](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogGridLayout.java)
+:coffee:[GridLayout](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogGridLayout.java)
 
 ---
 
-:beginner: setResizable()
+> :beginner: **setResizable()**
 
 - Descripción
 
@@ -279,7 +281,9 @@ Permite o deshabilita la capacidad de redimensionar el cuadro de diálogo por pa
 
 - Sintaxis
 
-dialog.setResizable(true|false);
+```java
+dialog.setResizable(true);
+```
 
 - Nota
 
@@ -297,11 +301,11 @@ Agregar setResizable
 
 - Ejemplo
 
-[setResizable](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetresizable.java)
+:coffee:[setResizable](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetresizable.java)
 
 ---
 
-:beginner: setModalityType()
+> :beginner: **setModalityType()**
 
 - Descripción
 
@@ -309,28 +313,34 @@ Este método permite especificar cómo el diálogo interactúa con otras ventana
 
 - Sintaxis
 
+```java
 dialog.setModalityType(ModalityType.APPLICATION_MODAL);
+```
 
+```java
 dialog2.setModalityType(ModalityType.DOCUMENT_MODAL);
+```
 
+```java
 dialog3.setModalityType(ModalityType.MODELESS);
+```
 
 - Nota
 
 El método `setModalityType` toma un argumento del tipo `Dialog.ModalityType`, que puede ser uno de los siguientes:
 
-1. `Dialog.ModalityType.APPLICATION_MODAL`: Este tipo de modalidad hace que el diálogo sea modal para su aplicación, lo que significa que bloqueará la interacción con otras partes de la aplicación mientras esté abierto. El usuario debe cerrar el diálogo antes de poder interactuar con otras ventanas de la misma aplicación.
+1. **Dialog.ModalityType.APPLICATION_MODAL**: Este tipo de modalidad hace que el diálogo sea modal para su aplicación, lo que significa que bloqueará la interacción con otras partes de la aplicación mientras esté abierto. El usuario debe cerrar el diálogo antes de poder interactuar con otras ventanas de la misma aplicación.
 
-2. `Dialog.ModalityType.DOCUMENT_MODAL`: Este tipo de modalidad hace que el diálogo sea modal solo para el documento principal de la aplicación, lo que significa que bloqueará la interacción con otras ventanas del mismo documento principal mientras esté abierto.
+2. **Dialog.ModalityType.DOCUMENT_MODAL**: Este tipo de modalidad hace que el diálogo sea modal solo para el documento principal de la aplicación, lo que significa que bloqueará la interacción con otras ventanas del mismo documento principal mientras esté abierto.
 
-3. `Dialog.ModalityType.MODELESS`: Este tipo de modalidad hace que el diálogo sea no modal, lo que significa que no bloqueará la interacción con otras partes de la aplicación mientras esté abierto. El usuario puede interactuar con otras ventanas y componentes mientras el diálogo está en pantalla.
+3. **Dialog.ModalityType.MODELESS**: Este tipo de modalidad hace que el diálogo sea no modal, lo que significa que no bloqueará la interacción con otras partes de la aplicación mientras esté abierto. El usuario puede interactuar con otras ventanas y componentes mientras el diálogo está en pantalla.
 - Ejemplo
 
-[setModalityType](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetModalityType.java)
+:coffee:[setModalityType](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetModalityType.java)
 
 ---
 
-:beginner: dispose()
+> :beginner: **dispose()**
 
 - Descripción
 
@@ -338,7 +348,9 @@ Libera los recursos utilizados por el cuadro de diálogo cuando ya no se necesit
 
 - Sintaxis
 
+```java
 dialog.dispose();
+```
 
 - Nota
 
@@ -351,11 +363,11 @@ el método `dispose()` es un método que se utiliza para liberar los recursos as
 3. Se notifica al sistema de ventanas (en el sistema operativo subyacente) que la ventana de diálogo debe ser eliminada, lo que puede liberar recursos adicionales del sistema.
 - Ejemplo
 
-[dispose](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogdispose.java)
+:coffee:[dispose](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogdispose.java)
 
 ---
 
-:beginner: add()
+> :beginner:**add()**
 
 - Descripción
 
@@ -363,7 +375,9 @@ Se utiliza para agregar componentes gráficos (como botones, etiquetas, campos d
 
 - Sintaxis
 
+```java
 dialog.add(componente);
+```
 
 - Nota
 
@@ -371,19 +385,19 @@ Donde `dialog` es un objeto de tipo `JDialog`, y `componente` es el componente g
 
 Por ejemplo, para agregar una etiqueta (`JLabel`) al diálogo:
 
-JDialog dialog = new JDialog();
+`JDialog dialog = new JDialog();`
 
-JLabel label = new JLabel("Hola, mundo!");
+`JLabel label = new JLabel("Hola, mundo!");`
 
-dialog.add(label);
+`dialog.add(label);`
 
 - Ejemplo
 
-[add](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogadd.java)
+:coffee:[add](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogadd.java)
 
 ---
 
-:beginner: setVisible()
+> :beginner: **setVisible()**
 
 - Descripción
 
@@ -391,11 +405,13 @@ Es un método utilizado para cambiar la visibilidad de un componente gráfico, c
 
 - Sintaxis
 
-dialog.setVisible(false|true);
+```java
+dialog.setVisible(true);
+```
 
 - Nota
 
-Este método toma un argumento booleano, que especifica si se debe mostrar (`true`) o ocultar (`false`) el componente. Cuando se llama a `setVisible(true)` en un `JDialog`, la ventana de diálogo se muestra en la pantalla y se vuelve interactiva para el usuario. Por* *otro lado, si se llama a `setVisible(false)`, la ventana se oculta y ya no es visible para el usuario.
+Este método toma un argumento booleano, que especifica si se debe mostrar (`true`) o ocultar (`false`) el componente. Cuando se llama a `setVisible(true)` en un `JDialog`, la ventana de diálogo se muestra en la pantalla y se vuelve interactiva para el usuario. Por otro lado, si se llama a `setVisible(false)`, la ventana se oculta y ya no es visible para el usuario.
 
 Crear un JDialog
 
@@ -407,11 +423,11 @@ Agregar el metodo setVisible
 
 - Ejemplo
 
-[setVisible](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetVisible.java)
+:coffee:[setVisible](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetVisible.java)
 
 ---
 
-:beginner: setLocationRelativeTo()
+> :beginner: **setLocationRelativeTo()**
 
 - Descripción
 
@@ -419,7 +435,9 @@ Propiedad que especifica un componente relativo al cual se posicionará el cuadr
 
 - Sintaxis
 
+```java
 dialog.setLocationRelativeTo(null);
+```
 
 - Nota
 
@@ -437,6 +455,6 @@ En otras palabras, al pasar `null` como argumento a `setLocationRelativeTo`, le 
 
 - Ejemplo
 
-[setLocationRelativeTo](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetLocationRelativeTo.java)
+:coffe:[setLocationRelativeTo](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetLocationRelativeTo.java)
 
 ---
