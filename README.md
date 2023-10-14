@@ -155,13 +155,13 @@ Crear un JDialog
 Agregar setTitle  
 `dialog.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);`
 
-- Ejemplo
+- Ejemplo:coffee:
 
-:coffee:[DO_NOTHING_ON_CLOSE](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetDefaultCloseOperation.java)
+[DO_NOTHING_ON_CLOSE](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetDefaultCloseOperation.java)
 
-:coffee:[HIDE_ON_CLOSE](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetDefaultCloseOperationHIDE.java)
+[HIDE_ON_CLOSE](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetDefaultCloseOperationHIDE.java)
 
-:coffee:[DISPOSE_ON_CLOSE](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetDefaultCloseOperationDISPOSE.java)
+[DISPOSE_ON_CLOSE](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetDefaultCloseOperationDISPOSE.java)
 
 ---
 
@@ -263,13 +263,13 @@ Establece el administrador de diseño del panel para controlar la disposición d
 
 *Organiza los componentes en una cuadrícula de filas y columnas de tamaño fijo. Todos los componentes en un GridLayout tienen el mismo tamaño.*
 
-- Ejemplo
+- Ejemplo:coffee:
 
-:coffee:[FlowLayout](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialoFlowLayout.java)
+[FlowLayout](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialoFlowLayout.java)
 
-:coffee:[BorderLayout](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogBorderLayout.java)
+[BorderLayout](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogBorderLayout.java)
 
-:coffee:[GridLayout](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogGridLayout.java)
+[GridLayout](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogGridLayout.java)
 
 ---
 
