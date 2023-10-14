@@ -115,9 +115,9 @@ Para el uso del metodo setVisible se debe instanciar JDialogs, posteriormente ll
 <sub>Agregar setVisible </sub>  
 `dialog.setVisible("true");`
 
-- Ejemplo
+- Ejemplo:coffee:
 
-:coffee:[setVisible]( https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogVisibilityExample.java)
+[setVisible]( https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogVisibilityExample.java)
 
 ---
 
@@ -187,9 +187,9 @@ Crear un JDialog
 Agregar setVisible  
 `dialog.setTitle("Titulo de JDialog Personalizado");`
 
-- Ejemplo
+- Ejemplo:coffee:
 
-:coffee:[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetTitle.java)
+[setTitle](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetTitle.java)
 
 ---
 
@@ -217,9 +217,9 @@ Crear un JDialog
 Agregar setVisible  
 `dialog.pack();`
 
-- Ejemplo
+- Ejemplo:coffee:
 
-:coffee:[pack](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogpack.java)
+[pack](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogpack.java)
 
 ---
 
@@ -299,9 +299,9 @@ Crear un JDialog
 Agregar setResizable  
 `dialog.setResizable(true);`
 
-- Ejemplo
+- Ejemplo:coffee:
 
-:coffee:[setResizable](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetresizable.java)
+[setResizable](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetresizable.java)
 
 ---
 
@@ -334,9 +334,9 @@ El método `setModalityType` toma un argumento del tipo `Dialog.ModalityType`, q
 2. **Dialog.ModalityType.DOCUMENT_MODAL**: Este tipo de modalidad hace que el diálogo sea modal solo para el documento principal de la aplicación, lo que significa que bloqueará la interacción con otras ventanas del mismo documento principal mientras esté abierto.
 
 3. **Dialog.ModalityType.MODELESS**: Este tipo de modalidad hace que el diálogo sea no modal, lo que significa que no bloqueará la interacción con otras partes de la aplicación mientras esté abierto. El usuario puede interactuar con otras ventanas y componentes mientras el diálogo está en pantalla.
-- Ejemplo
+- Ejemplo:coffee:
 
-:coffee:[setModalityType](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetModalityType.java)
+[setModalityType](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetModalityType.java)
 
 ---
 
@@ -361,9 +361,9 @@ el método `dispose()` es un método que se utiliza para liberar los recursos as
 2. La ventana de diálogo se cierra y ya no es visible.
 
 3. Se notifica al sistema de ventanas (en el sistema operativo subyacente) que la ventana de diálogo debe ser eliminada, lo que puede liberar recursos adicionales del sistema.
-- Ejemplo
+- Ejemplo:coffee:
 
-:coffee:[dispose](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogdispose.java)
+[dispose](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogdispose.java)
 
 ---
 
@@ -391,9 +391,9 @@ Por ejemplo, para agregar una etiqueta (`JLabel`) al diálogo:
 
 `dialog.add(label);`
 
-- Ejemplo
+- Ejemplo:coffee:
 
-:coffee:[add](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogadd.java)
+[add](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogadd.java)
 
 ---
 
@@ -421,9 +421,9 @@ Agregar el metodo setVisible
 
 `dialog.setVisible(true);`
 
-- Ejemplo
+- Ejemplo:coffee:
 
-:coffee:[setVisible](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetVisible.java)
+[setVisible](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetVisible.java)
 
 ---
 
@@ -453,8 +453,8 @@ Cuando utilizas `.setLocationRelativeTo(null)` en un `JDialog`, estás configura
 
 En otras palabras, al pasar `null` como argumento a `setLocationRelativeTo`, le estás indicando al sistema que la ventana de diálogo debe aparecer en el centro de la pantalla independientemente de la ubicación de otras ventanas o componentes en la interfaz de usuario. Esto es útil cuando deseas que la ventana de diálogo sea independiente y aparezca en el centro de la pantalla sin importar la posición de otras ventanas.
 
-- Ejemplo
+- Ejemplo:coffee:
 
-:coffee:[setLocationRelativeTo](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetLocationRelativeTo.java)
+[setLocationRelativeTo](https://github.com/meditux27/JDialog-JavaSwing/blob/main/Example/JDialogsetLocationRelativeTo.java)
 
 ---
